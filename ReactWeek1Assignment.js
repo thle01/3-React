@@ -7,10 +7,10 @@ class Student {
 }
 
 class Bootcamp {
-	students = [];
-	constructor(name,level) {
+	constructor(name,level,students = []) {
 		this.name = name;
 		this.level = level;
+		this.students = students;
 	}
 	registerStudent(s) {
 		const found = this.students.some(n => n.email === s.email);
